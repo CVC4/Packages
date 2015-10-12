@@ -93,7 +93,7 @@ instead of the "cvc4-nightly" packages.
 %patch0 -p1
 
 %build
-%configure --enable-static --enable-shared --with-build=production --enable-language-bindings=c,java --enable-gpl --with-cln --with-compat --with-readline --disable-doxygen-pdf --enable-doxygen-dot JAVA_CPPFLAGS='-I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux'
+%configure --enable-static --enable-shared --with-build=production --enable-language-bindings=c,java --enable-gpl --with-cln --with-compat --with-readline --disable-doxygen-pdf --enable-doxygen-dot --disable-proof JAVA_CPPFLAGS='-I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux'
 # configure --enable-static --enable-shared --with-build=default --with-portfolio --enable-language-bindings=c,java,tcl,ruby,php,perl,python --with-gmp --with-compat --with-readline --with-portfolio --disable-doxygen-pdf --enable-doxygen-dot
 # PERL_CPPFLAGS=-I/usr/lib/perl/5.12/CORE/ PHP_CPPFLAGS='-I/usr/include/php5/Zend -I/usr/include/php5/TSRM -I/usr/include/php5/main -I/usr/include/php5' PYTHON_CPPFLAGS=-I/usr/include/python2.7 RUBY_CPPFLAGS=-I/usr/lib/ruby/1.8/x86_64-linux TCL_CPPFLAGS=-I/usr/include/tcl8.5
 make %{?_smp_mflags}
