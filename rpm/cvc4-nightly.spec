@@ -135,13 +135,8 @@ rm -rf %{buildroot}
 %{_includedir}/cvc4/context
 %{_includedir}/cvc4/cvc4.h
 %{_includedir}/cvc4/cvc4_public.h
-%{_includedir}/cvc4/decision
 %{_includedir}/cvc4/expr
-%{_includedir}/cvc4/lib
-%{_includedir}/cvc4/main
-%{_includedir}/cvc4/printer
 %{_includedir}/cvc4/proof
-%{_includedir}/cvc4/prop
 %{_includedir}/cvc4/smt
 %{_includedir}/cvc4/theory
 %{_includedir}/cvc4/util
@@ -193,6 +188,8 @@ rm -rf %{buildroot}
 %postun -p /sbin/ldconfig
 
 %changelog
+* Sat Jan 16 2016 Kshitij Bansal <kshitij@cs.nyu.edu> 1.4-2
+- remove directories no longer installed
 * Sun Jul 13 2014 Morgan Deters <mdeters@cs.nyu.edu> 1.4-1
 * Wed Dec 19 2013 Morgan Deters <mdeters@cs.nyu.edu> 1.3-3
 - fix to documentation packaging
