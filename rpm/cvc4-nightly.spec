@@ -132,12 +132,14 @@ rm -rf %{buildroot}
 
 %files devel
 %defattr(-,root,root,-)
+%{_includedir}/cvc4/base
 %{_includedir}/cvc4/context
 %{_includedir}/cvc4/cvc4.h
 %{_includedir}/cvc4/cvc4_public.h
 %{_includedir}/cvc4/expr
 %{_includedir}/cvc4/proof
 %{_includedir}/cvc4/smt
+%{_includedir}/cvc4/smt_util
 %{_includedir}/cvc4/theory
 %{_includedir}/cvc4/util
 %{_includedir}/cvc4/options
