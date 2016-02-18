@@ -1,14 +1,11 @@
+usr/include/cvc4/base
 usr/include/cvc4/context
 usr/include/cvc4/cvc4.h
 usr/include/cvc4/cvc4_public.h
-usr/include/cvc4/decision
 usr/include/cvc4/expr
-usr/include/cvc4/lib
-usr/include/cvc4/main
-usr/include/cvc4/printer
 usr/include/cvc4/proof
-usr/include/cvc4/prop
 usr/include/cvc4/smt
+usr/include/cvc4/smt_util
 usr/include/cvc4/theory
 usr/include/cvc4/util
 usr/include/cvc4/options

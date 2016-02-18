@@ -93,7 +93,7 @@ instead of the "cvc4-nightly" packages.
 %patch0 -p1
 
 %build
-%configure --enable-static --enable-shared --with-build=production --enable-language-bindings=c,java --enable-gpl --with-cln --with-compat --with-readline --disable-doxygen-pdf --enable-doxygen-dot JAVA_CPPFLAGS='-I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux'
+%configure --enable-static --enable-shared --with-build=production --enable-language-bindings=c,java --enable-gpl --with-cln --with-compat --with-readline --disable-doxygen-pdf --enable-doxygen-dot --disable-proof JAVA_CPPFLAGS='-I/usr/lib/jvm/java/include -I/usr/lib/jvm/java/include/linux'
 # configure --enable-static --enable-shared --with-build=default --with-portfolio --enable-language-bindings=c,java,tcl,ruby,php,perl,python --with-gmp --with-compat --with-readline --with-portfolio --disable-doxygen-pdf --enable-doxygen-dot
 # PERL_CPPFLAGS=-I/usr/lib/perl/5.12/CORE/ PHP_CPPFLAGS='-I/usr/include/php5/Zend -I/usr/include/php5/TSRM -I/usr/include/php5/main -I/usr/include/php5' PYTHON_CPPFLAGS=-I/usr/include/python2.7 RUBY_CPPFLAGS=-I/usr/lib/ruby/1.8/x86_64-linux TCL_CPPFLAGS=-I/usr/include/tcl8.5
 make %{?_smp_mflags}
@@ -132,17 +132,14 @@ rm -rf %{buildroot}
 
 %files devel
 %defattr(-,root,root,-)
+%{_includedir}/cvc4/base
 %{_includedir}/cvc4/context
 %{_includedir}/cvc4/cvc4.h
 %{_includedir}/cvc4/cvc4_public.h
-%{_includedir}/cvc4/decision
 %{_includedir}/cvc4/expr
-%{_includedir}/cvc4/lib
-%{_includedir}/cvc4/main
-%{_includedir}/cvc4/printer
 %{_includedir}/cvc4/proof
-%{_includedir}/cvc4/prop
 %{_includedir}/cvc4/smt
+%{_includedir}/cvc4/smt_util
 %{_includedir}/cvc4/theory
 %{_includedir}/cvc4/util
 %{_includedir}/cvc4/options
@@ -193,6 +190,8 @@ rm -rf %{buildroot}
 %postun -p /sbin/ldconfig
 
 %changelog
+* Sat Jan 16 2016 Kshitij Bansal <kshitij@cs.nyu.edu> 1.4-2
+- remove directories no longer installed
 * Sun Jul 13 2014 Morgan Deters <mdeters@cs.nyu.edu> 1.4-1
 * Wed Dec 19 2013 Morgan Deters <mdeters@cs.nyu.edu> 1.3-3
 - fix to documentation packaging
