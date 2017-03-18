@@ -7,9 +7,9 @@ Last-Update: 2014-08-05
 --- a/Makefile.am
 +++ b/Makefile.am
 @@ -112,6 +112,10 @@
-
+ 
  endif
-
+ 
 +install-data-local: doxygen-doc
 +	$(mkinstalldirs) "$(DESTDIR)$(docdir)/doxygen"
 +	cp -r $(top_srcdir)/doc/doxygen/html "$(DESTDIR)$(docdir)/doxygen"
@@ -20,40 +20,37 @@ Last-Update: 2014-08-05
 --- a/Makefile.in
 +++ b/Makefile.in
 @@ -1125,7 +1125,7 @@
-
+ 
  info-am:
-
+ 
 -install-data-am: install-man
 +install-data-am: install-data-local install-man
-
+ 
  install-dvi: install-dvi-recursive
-
-@@ -1262,14 +1262,13 @@ uninstall-man: uninstall-man1 uninstall-
- 	distclean-generic distclean-hdr distclean-libtool \
- 	distclean-local distclean-tags distcleancheck distdir \
- 	distuninstallcheck dvi dvi-am html html-am info info-am \
--	install install-am install-data \
--	install-data-am install-data-local install-dvi install-dvi-am \
--	install-exec install-exec-am install-html install-html-am \
--	install-info install-info-am install-man install-man1 \
--	install-man3 install-man5 install-pdf install-pdf-am \
--	install-ps install-ps-am install-strip installcheck \
--	installcheck-am installdirs installdirs-am maintainer-clean \
--	maintainer-clean-generic mostlyclean \
-+	install install-am install-data install-data-am install-dvi \
-+	install-dvi-am install-exec install-exec-am install-html \
-+	install-html-am install-info install-info-am install-man \
-+	install-man1 install-man3 install-man5 install-pdf \
-+	install-pdf-am install-ps install-ps-am install-strip \
-+	installcheck installcheck-am installdirs installdirs-am \
-+	maintainer-clean maintainer-clean-generic mostlyclean \
- 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
- 	tags tags-am uninstall uninstall-am uninstall-man \
- 	uninstall-man1 uninstall-man3 uninstall-man5
+ 
+@@ -1186,12 +1186,12 @@
+ 	distclean-hdr distclean-libtool distclean-local distclean-tags \
+ 	distcleancheck distdir distuninstallcheck dvi dvi-am html \
+ 	html-am info info-am install install-am install-data \
+-	install-data-am install-dvi install-dvi-am install-exec \
+-	install-exec-am install-html install-html-am install-info \
+-	install-info-am install-man install-man1 install-man3 \
+-	install-man5 install-pdf install-pdf-am install-ps \
+-	install-ps-am install-strip installcheck installcheck-am \
+-	installdirs installdirs-am maintainer-clean \
++	install-data-am install-data-local install-dvi install-dvi-am \
++	install-exec install-exec-am install-html install-html-am \
++	install-info install-info-am install-man install-man1 \
++	install-man3 install-man5 install-pdf install-pdf-am \
++	install-ps install-ps-am install-strip installcheck \
++	installcheck-am installdirs installdirs-am maintainer-clean \
+ 	maintainer-clean-generic mostlyclean mostlyclean-generic \
+ 	mostlyclean-libtool pdf pdf-am ps ps-am tags tags-recursive \
+ 	uninstall uninstall-am uninstall-man uninstall-man1 \
 @@ -1334,6 +1334,10 @@
  	rm -f doc/pcvc4.1
  	cp -p "$<" "$@"
-
+ 
 +install-data-local: doxygen-doc
 +	$(mkinstalldirs) "$(DESTDIR)$(docdir)/doxygen"
 +	cp -r $(top_srcdir)/doc/doxygen/html "$(DESTDIR)$(docdir)/doxygen"
@@ -66,9 +63,9 @@ Last-Update: 2014-08-05
 @@ -1361,7 +1361,7 @@
  # toolkit from AT&T and Lucent Bell Labs. The other options in this section
  # have no effect if this option is set to NO (the default)
-
+ 
 -HAVE_DOT               = $(HAVE_DOT)
 +HAVE_DOT               = NO
-
+ 
  # By default doxygen will write a font called FreeSans.ttf to the output
  # directory and reference it in all dot files that doxygen generates. This
