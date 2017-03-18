@@ -28,25 +28,25 @@ Last-Update: 2014-08-05
 
  install-dvi: install-dvi-recursive
 
-@@ -1262,14 +1262,13 @@
+@@ -1262,13 +1262,14 @@
  	distclean-generic distclean-hdr distclean-libtool \
  	distclean-local distclean-tags distcleancheck distdir \
  	distuninstallcheck dvi dvi-am html html-am info info-am \
--	install install-am install-data \
--	install-data-am install-data-local install-dvi install-dvi-am \
--	install-exec install-exec-am install-html install-html-am \
--	install-info install-info-am install-man install-man1 \
--	install-man3 install-man5 install-pdf install-pdf-am \
--	install-ps install-ps-am install-strip installcheck \
--	installcheck-am installdirs installdirs-am maintainer-clean \
--	maintainer-clean-generic mostlyclean \
-+	install install-am install-data install-data-am install-dvi \
-+	install-dvi-am install-exec install-exec-am install-html \
-+	install-html-am install-info install-info-am install-man \
-+	install-man1 install-man3 install-man5 install-pdf \
-+	install-pdf-am install-ps install-ps-am install-strip \
-+	installcheck installcheck-am installdirs installdirs-am \
-+	maintainer-clean maintainer-clean-generic mostlyclean \
++	install install-am install-data \
++	install-data-am install-data-local install-dvi install-dvi-am \
++	install-exec install-exec-am install-html install-html-am \
++	install-info install-info-am install-man install-man1 \
++	install-man3 install-man5 install-pdf install-pdf-am \
++	install-ps install-ps-am install-strip installcheck \
++	installcheck-am installdirs installdirs-am maintainer-clean \
++	maintainer-clean-generic mostlyclean \
+-	install install-am install-data install-data-am install-dvi \
+-	install-dvi-am install-exec install-exec-am install-html \
+-	install-html-am install-info install-info-am install-man \
+-	install-man1 install-man3 install-man5 install-pdf \
+-	install-pdf-am install-ps install-ps-am install-strip \
+-	installcheck installcheck-am installdirs installdirs-am \
+-	maintainer-clean maintainer-clean-generic mostlyclean \
  	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
  	tags tags-am uninstall uninstall-am uninstall-man \
  	uninstall-man1 uninstall-man3 uninstall-man5
