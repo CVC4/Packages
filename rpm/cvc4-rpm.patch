@@ -83,7 +83,7 @@ diff -Nurp cvc4-1.3-prerelease/Makefile.in cvc4-1.3-prerelease.patched/Makefile.
 diff -Nurp cvc4-1.3-prerelease/config/doxygen.cfg cvc4-1.3-prerelease.patched/config/doxygen.cfg
 --- cvc4-1.3-prerelease/config/doxygen.cfg	2013-07-29 20:10:18.768245307 +0000
 +++ cvc4-1.3-prerelease.patched/config/doxygen.cfg	2013-07-31 23:05:35.428453672 +0000
-@@ -1361,7 +1361,7 @@ HIDE_UNDOC_RELATIONS   = YES
+@@ -1362,7 +1362,7 @@ HIDE_UNDOC_RELATIONS   = YES
  # toolkit from AT&T and Lucent Bell Labs. The other options in this section
  # have no effect if this option is set to NO (the default)
  
